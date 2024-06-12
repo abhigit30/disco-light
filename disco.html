@@ -1,69 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 <body id="body">
-   <button onclick="changeRed()" style="background-color: red;color: aliceblue;margin-left: 42.4%;margin-right: 40%;border-radius: 10px;height: 10%;width: 15%;margin-top: 14%;">Red</button>
-   <button style="background-color: green;color: aliceblue;margin-left: 42.4%;margin-right: 40%;border-radius: 10px;height: 10%;width: 15%;margin-top: 1%;">Green</button>
-   <button style="background-color: blue;color: aliceblue;margin-left: 42.4%;margin-right: 40%;border-radius: 10px;height: 10%;width: 15%;margin-top: 1%;">Blue</button>
-   <button onclick="onDisco()" style="background-color:rgb(208, 143, 22);color: aliceblue;margin-left: 42.4%;margin-right: 40%;border-radius: 10px;height: 10%;width: 15%;margin-top: 1%;">Disco</button> 
-   <h1 id="counter"></h1>
+        <button onclick="changeRed()" style="background-color: red;color: aliceblue;margin-left: 42.4%;margin-right: 40%;border-radius: 10px;height: 10%;width: 15%;margin-top: 14%;">Red</button>
+        <button style="background-color: green;color: aliceblue;margin-left: 42.4%;margin-right: 40%;border-radius: 10px;height: 10%;width: 15%;margin-top: 1%;">Green</button>
+        <button style="background-color: blue;color: aliceblue;margin-left: 42.4%;margin-right: 40%;border-radius: 10px;height: 10%;width: 15%;margin-top: 1%;">Blue</button>
+        <button onclick="onDisco()" style="background-color:rgb(208, 143, 22);color: aliceblue;margin-left: 42.4%;margin-right: 40%;border-radius: 10px;height: 10%;width: 15%;margin-top: 1%;">Disco</button> 
+        <h1 id="counter"></h1>
+     <script>
+         // cnt=0
+         color='red'
+         function onDisco(){setInterval(function(){
+             // document.getElementById('counter').innerHTML=cnt++
+             if(color=='red'){
+                 color = 'green'
+                 document.getElementById('body').style.backgroundColor=color
+             }
+             else if(color=='green'){
+                 color = 'blue'
+                 document.getElementById('body').style.backgroundColor=color
+             }
+             else if(color=='blue'){
+                 color = 'red'
+                 document.getElementById('body').style.backgroundColor=color
+             }
+         },200)}
+         // function changeRed(){
+         //     if(color=='green'){
+         //         color = 'red'
+         //         document.getElementById('body').style.backgroundColor=color
+         //     }
+         //     else if(color=='blue'){
+         //         color = 'red'
+         //         document.getElementById('body').style.backgroundColor=color
+         //     }
+         //     else {
+         //         color = 'red'
+         //         document.getElementById('body').style.backgroundColor=color
+         //     }
+         // }
+         // function changeGreen(){
+         //     if(color=='red'){
+         //         color = 'green'
+         //         document.getElementById('body').style.backgroundColor=color
+         //     }
+         //     else if(color=='blue'){
+         //         color = 'green'
+         //         document.getElementById('body').style.backgroundColor=color
+         //     }
+         //     else {
+         //         color = 'green'
+         //         document.getElementById('body').style.backgroundColor=color
+         //     }
+         // }
+         // function changeBlue(){
+         //     if(color=='green'){
+         //         color = 'Blue'
+         //         document.getElementById('body').style.backgroundColor=color
+         //     }
+         //     else if(color=='red'){
+         //         color = 'Blue'
+         //         document.getElementById('body').style.backgroundColor=color
+         //     }
+         //     else {
+         //         color = 'Blue'
+         //         document.getElementById('body').style.backgroundColor=color
+         //     }
+         // }
+         
+     </script>
 </body>
-<script>
-    // cnt=0
-    color='red'
-    function onDisco(){setInterval(function(){
-        // document.getElementById('counter').innerHTML=cnt++
-        if(color=='red'){
-            color = 'green'
-            document.getElementById('body').style.backgroundColor=color
-        }
-        else if(color=='green'){
-            color = 'blue'
-            document.getElementById('body').style.backgroundColor=color
-        }
-        else if(color=='blue'){
-            color = 'red'
-            document.getElementById('body').style.backgroundColor=color
-        }
-    },200)}
-    // function changeRed(){
-    //     if(color=='green'){
-    //         color = 'red'
-    //         document.getElementById('body').style.backgroundColor=color
-    //     }
-    //     else if(color=='blue'){
-    //         color = 'red'
-    //         document.getElementById('body').style.backgroundColor=color
-    //     }
-    //     else {
-    //         color = 'red'
-    //         document.getElementById('body').style.backgroundColor=color
-    //     }
-    // }
-    // function changeGreen(){
-    //     if(color=='red'){
-    //         color = 'green'
-    //         document.getElementById('body').style.backgroundColor=color
-    //     }
-    //     else if(color=='blue'){
-    //         color = 'green'
-    //         document.getElementById('body').style.backgroundColor=color
-    //     }
-    //     else {
-    //         color = 'green'
-    //         document.getElementById('body').style.backgroundColor=color
-    //     }
-    // }
-    // function changeBlue(){
-    //     if(color=='green'){
-    //         color = 'Blue'
-    //         document.getElementById('body').style.backgroundColor=color
-    //     }
-    //     else if(color=='red'){
-    //         color = 'Blue'
-    //         document.getElementById('body').style.backgroundColor=color
-    //     }
-    //     else {
-    //         color = 'Blue'
-    //         document.getElementById('body').style.backgroundColor=color
-    //     }
-    // }
-    
-</script>
+</html>
